@@ -6,14 +6,18 @@
 
 import SwiftUI
 import SlideKit
-
+// SwiftUI / SlideKit では UI に関わる処理はメインスレッドで行う必要がある
+// @MainActor を付けることで、この構造体内のプロパティや関数が 常にメインスレッドで実行される ことを保証
 @MainActor
+// スライドの 共通設定や管理情報 をまとめた構造体
+// アプリ全体でスライドサイズやスライドの順序を管理する
 struct SlideConfiguration {
 
-    /// Edit the slide size.
+    // スライドサイズ 16:9 の標準サイズ
     let size = SlideSize.standard16_9
 
-    ///  Add your slides into the trailing closure.
+    // SlideIndexController は スライドの順番や状態を管理するコントローラー
+    // クロージャ内にスライドを追加していくことで、スライドの並び順
     let slideIndexController = SlideIndexController {
         SampleSlide()
     }
