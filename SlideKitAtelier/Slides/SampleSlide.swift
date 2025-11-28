@@ -8,20 +8,30 @@ import SlideKit
 import SwiftUI
 
 @Slide
+// スライドや画面は View を作ることで定義
 struct SampleSlide: View {
-
+    // スライドの段階（ステート） を定義
+    // PhasedState というプロトコルを採用しているので、SlideKit の @Phase と連携できる
     enum SlidePhasedState: Int, PhasedState {
+        // initial が最初の状態、next が次の状態
         case initial, next
     }
 
+    // @Phase は 現在のスライドの状態 を管理するためのプロパティラッパー
+    // @Phase は 現在のスライドの状態を管理するためのプロパティラッパーです。
+    // タップや矢印キーで状態が変わると、自動で phase が更新される
     @Phase var phase: SlidePhasedState
 
     var body: some View {
+        // スライドのタイトルを表示するコンテナ
         HeaderSlide("How to use the slide") {
+            // 箇条書きの項目を表示
+            // 中に入れ子で Item を書くと 階層付きの箇条書き
             Item("Please tap the right half of this window") {
                 Item("You can go to the next state")
                 Item("You can also use \"return\" or \"→\"")
             }
+            // phase が次の状態になったときだけ、追加の箇条書き
             if phase == .next {
                 Item("Please tap the left half of this window") {
                     Item("You can back the previous slide")
@@ -31,6 +41,9 @@ struct SampleSlide: View {
         }
     }
 
+    // スライドの ナレーションや説明文 を管理するためのプロパティ
+    // phase に応じて、読み上げる内容が変わる
+    // script を使って、スライドごとの説明テキスト を出すことができる
     var script: String {
         switch phase {
         case .initial:
