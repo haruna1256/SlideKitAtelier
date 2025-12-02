@@ -8,29 +8,41 @@ import SwiftUI
 import SlideKit
 
 @main
+// SlideKit で作るプレゼンアプリのエントリーポイント
 struct SlideKitAtelierApp: App {
 
-    /// Edit slide configurations in SlideConfiguration.swift
+    // スライド全体の設定 を管理
     private static let configuration = SlideConfiguration()
 
-    /// A presentation content view.
-    /// Edit the view here if you'd like to set environments, overlay views or background views.
+    // スライドを順番に表示するビュー
     var presentationContentView: some View {
+        // どのスライドを表示するか管理するコントローラー
         SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
+        // 全体の色を設定
             .background(.white)
             .foregroundColor(.black)
     }
 
     var body: some Scene {
+        // スクリーンに映すプレゼン用ビュー
         WindowGroup {
             PresentationView(slideSize: Self.configuration.size) {
                 presentationContentView
             }
         }
+        // .setupAsPresentationWindow
+        // → このウィンドウを プレゼン用として設定。
+        // → ダブルクリックや特定操作でスライド編集画面を開くことも可能。
         .setupAsPresentationWindow(Self.configuration.slideIndexController) {
             NSWorkspace.shared.open(URL(string: "SlideKitAtelier://editor")!)
         }
+        // メニューから PDF に書き出す機能
         .addPDFExportCommands(for: presentationContentView, with: Self.configuration.slideIndexController, size: Self.configuration.size)
+
+        // 発表者用画面
+        // 次のスライドのプレビュー
+        // タイマーやノート
+        // 現在のスライド番号などが確認できます。
 
         WindowGroup {
             macOSPresenterView(
@@ -40,6 +52,7 @@ struct SlideKitAtelierApp: App {
                 presentationContentView
             }
         }
+        // .setupAsPresenterWindow() でプレゼン用ウィンドウとリンク
         .setupAsPresenterWindow()
     }
 }
