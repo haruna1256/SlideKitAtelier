@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		33731079806E8EE86E56057F /* SlideKitAtelierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBC5EBB84C03AB5BBC5ED /* SlideKitAtelierApp.swift */; };
 		571D634AA5096E839ABD0C59 /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9865720E850CF3128D1F4EDA /* SlideKit */; };
 		765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */; };
+		C3AA93732EDEB5F600DED877 /* CustomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA93722EDEB5F600DED877 /* CustomTheme.swift */; };
 		F916172F081C880C2A4A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553039D05CF5FE7D90673CF7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		553039D05CF5FE7D90673CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F9B93D61143679038DFBDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6B564336D79A7221EEA77296 /* SlideKitAtelier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideKitAtelier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AA93722EDEB5F600DED877 /* CustomTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTheme.swift; sourceTree = "<group>"; };
 		D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		E6234F61395003538B888563 /* SampleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +41,7 @@
 		328A404EEA175B20CC9696D7 /* SlideKitAtelier */ = {
 			isa = PBXGroup;
 			children = (
+				C3AA93712EDEB5D700DED877 /* Theme */,
 				553039D05CF5FE7D90673CF7 /* Assets.xcassets */,
 				5F9B93D61143679038DFBDE4 /* Info.plist */,
 				D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */,
@@ -63,6 +66,14 @@
 				328A404EEA175B20CC9696D7 /* SlideKitAtelier */,
 				C57D832F154484C3F6F5B325 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		C3AA93712EDEB5D700DED877 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C3AA93722EDEB5F600DED877 /* CustomTheme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		C57D832F154484C3F6F5B325 /* Products */ = {
@@ -118,7 +129,6 @@
 			packageReferences = (
 				2F6FB983E04AE58A55A99C50 /* XCRemoteSwiftPackageReference "SlideKit" */,
 			);
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -145,6 +155,7 @@
 			files = (
 				2717BF2D4E9FD63A28F7EB81 /* SampleSlide.swift in Sources */,
 				765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */,
+				C3AA93732EDEB5F600DED877 /* CustomTheme.swift in Sources */,
 				33731079806E8EE86E56057F /* SlideKitAtelierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

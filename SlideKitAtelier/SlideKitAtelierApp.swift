@@ -43,7 +43,7 @@ struct SlideKitAtelierApp: App {
         // 次のスライドのプレビュー
         // タイマーやノート
         // 現在のスライド番号などが確認できます。
-        // .setupAsPresenterWindow() でプレゼン用ウィンドウとリンク
+
         WindowGroup {
             macOSPresenterView(
                 slideSize: Self.configuration.size,
@@ -52,6 +52,7 @@ struct SlideKitAtelierApp: App {
                 presentationContentView
             }
         }
+        // .setupAsPresenterWindow() でプレゼン用ウィンドウとリンク
         .setupAsPresenterWindow()
     }
 }
