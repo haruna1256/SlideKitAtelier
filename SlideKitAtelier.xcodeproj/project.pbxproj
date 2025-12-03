@@ -11,6 +11,7 @@
 		33731079806E8EE86E56057F /* SlideKitAtelierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBC5EBB84C03AB5BBC5ED /* SlideKitAtelierApp.swift */; };
 		571D634AA5096E839ABD0C59 /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9865720E850CF3128D1F4EDA /* SlideKit */; };
 		765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */; };
+		C3AA93752EDECC7900DED877 /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA93742EDECC7900DED877 /* TitleSlide.swift */; };
 		F916172F081C880C2A4A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553039D05CF5FE7D90673CF7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		553039D05CF5FE7D90673CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F9B93D61143679038DFBDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6B564336D79A7221EEA77296 /* SlideKitAtelier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideKitAtelier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AA93742EDECC7900DED877 /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
 		D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		E6234F61395003538B888563 /* SampleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				E6234F61395003538B888563 /* SampleSlide.swift */,
+				C3AA93742EDECC7900DED877 /* TitleSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				2717BF2D4E9FD63A28F7EB81 /* SampleSlide.swift in Sources */,
 				765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */,
+				C3AA93752EDECC7900DED877 /* TitleSlide.swift in Sources */,
 				33731079806E8EE86E56057F /* SlideKitAtelierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

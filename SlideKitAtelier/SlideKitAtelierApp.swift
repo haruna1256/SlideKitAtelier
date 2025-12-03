@@ -18,9 +18,9 @@ struct SlideKitAtelierApp: App {
     var presentationContentView: some View {
         // どのスライドを表示するか管理するコントローラー
         SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
-        // 全体の色を設定
-            .background(.white)
-            .foregroundColor(.black)
+//        // 全体の色を設定
+//            .background(.white)
+//            .foregroundColor(.black)
     }
 
     var body: some Scene {
