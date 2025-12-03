@@ -19,6 +19,6 @@ struct SlideConfiguration {
     // SlideIndexController は スライドの順番や状態を管理するコントローラー
     // クロージャ内にスライドを追加していくことで、スライドの並び順
     let slideIndexController = SlideIndexController {
-        SampleSlide()
+        TitleSlide()
     }
 }
