@@ -14,13 +14,11 @@ struct SlideKitAtelierApp: App {
     // スライド全体の設定 を管理
     private static let configuration = SlideConfiguration()
 
+
     // スライドを順番に表示するビュー
     var presentationContentView: some View {
         // どのスライドを表示するか管理するコントローラー
         SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
-//        // 全体の色を設定
-//            .background(.white)
-//            .foregroundColor(.black)
     }
 
     var body: some Scene {

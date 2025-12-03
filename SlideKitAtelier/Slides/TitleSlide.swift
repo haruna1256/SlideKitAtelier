@@ -25,7 +25,7 @@ struct TitleSlide: View {
                     VStack {
                         Spacer()
                         Text("SlideKit を用いたインタラクティブ資料の設計")
-                            .font(.system(size: 72, weight: .bold))
+                            .font(Font.custom("KiwiMaru-Medium", size: 72))
                             .foregroundColor(.white)
                     }
                     .frame(height: 220)
@@ -38,10 +38,10 @@ struct TitleSlide: View {
                         .frame(width: 380, height: 350)
                     VStack(spacing: 16) {
                         Text("WEB・モバイルゼミ　最終発表")
-                            .font(.system(size: 56, weight: .medium))
+                            .font(Font.custom("KiwiMaru-Regular", size: 56))
                             .foregroundColor(Color("Pure White"))
                         Text("IE3A 12 川岸遥奈")
-                            .font(.system(size: 56, weight: .medium))
+                            .font(Font.custom("KiwiMaru-Regular", size: 56))
                             .foregroundColor(Color("Pure White"))
 
                     }

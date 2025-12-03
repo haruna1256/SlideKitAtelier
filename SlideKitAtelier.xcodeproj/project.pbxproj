@@ -13,6 +13,9 @@
 		765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */; };
 		C3AA93752EDECC7900DED877 /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA93742EDECC7900DED877 /* TitleSlide.swift */; };
 		C3AA937A2EDFC9DE00DED877 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA93792EDFC9DE00DED877 /* Colors.swift */; };
+		C3AA93862EDFE11100DED877 /* KiwiMaru-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */; };
+		C3AA93882EDFE11900DED877 /* KiwiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */; };
+		C3AA938A2EDFE12000DED877 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */; };
 		F916172F081C880C2A4A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553039D05CF5FE7D90673CF7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		6B564336D79A7221EEA77296 /* SlideKitAtelier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideKitAtelier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AA93742EDECC7900DED877 /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
 		C3AA93792EDFC9DE00DED877 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Medium.ttf"; sourceTree = "<group>"; };
+		C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Regular.ttf"; sourceTree = "<group>"; };
+		C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
 		D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		E6234F61395003538B888563 /* SampleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +49,7 @@
 		328A404EEA175B20CC9696D7 /* SlideKitAtelier */ = {
 			isa = PBXGroup;
 			children = (
+				C3AA93842EDFE10000DED877 /* fonts */,
 				C3AA93782EDFC9BE00DED877 /* Component */,
 				553039D05CF5FE7D90673CF7 /* Assets.xcassets */,
 				5F9B93D61143679038DFBDE4 /* Info.plist */,
@@ -77,6 +84,16 @@
 				C3AA93792EDFC9DE00DED877 /* Colors.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		C3AA93842EDFE10000DED877 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */,
+				C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */,
+				C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		C57D832F154484C3F6F5B325 /* Products */ = {
@@ -145,6 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AA938A2EDFE12000DED877 /* KiwiMaru-Light.ttf in Resources */,
+				C3AA93862EDFE11100DED877 /* KiwiMaru-Medium.ttf in Resources */,
+				C3AA93882EDFE11900DED877 /* KiwiMaru-Regular.ttf in Resources */,
 				F916172F081C880C2A4A2F90 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
