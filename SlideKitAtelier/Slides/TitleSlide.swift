@@ -11,45 +11,50 @@ import SlideKit
 struct TitleSlide: View {
     var body: some View {
         ZStack {
-            // 背景色
-            Color("LightBlueBackground")
+            // 背景をグラデーションに
+            BlueGlowGradient.gradient
                 .ignoresSafeArea()
 
-            HStack(spacing: 0) {
-                Image("swiftIcon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-                VStack(spacing: 40) {
-                    // タイトル
-                    Text("SlideKit を用いたインタラクティブ資料の設計")
-                        .font(.custom("TitleFont", size: 50))
-                        .foregroundColor(Color("SwiftOrange"))
-                        .bold()
-                        .multilineTextAlignment(.center)
+            VStack(spacing: 24) {
+                // ゼミのタイトル
+                HStack(spacing: 48) {
+                    Image("swift")
+                        .resizable()
+                        .frame(width: 320, height: 320)
 
-                    // サブタイトル・担当者
-                    VStack(spacing: 10) {
-                        Text("WEB・モバイルゼミ最終発表")
-                            .font(.custom("SubtitleFont", size: 24))
-                            .foregroundColor(Color("TextPrimary"))
-
-                        Text("川岸遥奈")
-                            .font(.custom("SubtitleFont", size: 24))
-                            .foregroundColor(Color("TextPrimary"))
-
-                        Text("日付: 発表日")
-                            .font(.custom("SubtitleFont", size: 24))
-                            .foregroundColor(Color("TextPrimary"))
+                    VStack {
+                        Spacer()
+                        Text("SlideKit を用いたインタラクティブ資料の設計")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.white)
                     }
+                    .frame(height: 220)
                 }
-                .padding()
-            }
 
+                // ゼミタイトル・自分の名前
+                HStack(spacing: 32) {
+                    Image("swift")
+                        .resizable()
+                        .frame(width: 380, height: 350)
+                    VStack(spacing: 16) {
+                        Text("WEB・モバイルゼミ　最終発表")
+                            .font(.system(size: 56, weight: .medium))
+                            .foregroundColor(Color("Pure White"))
+                        Text("IE3A 12 川岸遥奈")
+                            .font(.system(size: 56, weight: .medium))
+                            .foregroundColor(Color("Pure White"))
+
+                    }
+
+                }
+
+            }
         }
     }
 }
 
 #Preview {
-    TitleSlide()
+    SlidePreview {
+        TitleSlide()
+    }
 }
