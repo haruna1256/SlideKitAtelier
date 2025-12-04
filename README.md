@@ -44,4 +44,9 @@ SwiftUI と SlideKit を用いた **インタラクティブなプレゼン資�
 
 ## 実装
 #### タイトル
-<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/c1a80684-c71f-45b6-892b-8da9ca592806" />
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/e94e312a-e6f4-41ac-afce-b5cf60bc986d" />
+
+#### 目次
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/61e1cacc-bc42-428c-b087-b09af29403f0" />
+
+
