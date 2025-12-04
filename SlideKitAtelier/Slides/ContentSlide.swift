@@ -31,7 +31,7 @@ struct ContentSlide: View {
                     Spacer()
                 }
                 .padding(.leading, 40)
-                        .padding(.top, 40)
+                .padding(.top, 40)
 
                 Spacer()
 
