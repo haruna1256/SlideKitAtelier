@@ -16,6 +16,7 @@
 		C3AA93862EDFE11100DED877 /* KiwiMaru-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */; };
 		C3AA93882EDFE11900DED877 /* KiwiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */; };
 		C3AA938A2EDFE12000DED877 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */; };
+		C3AA938C2EE114D600DED877 /* ContentSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA938B2EE114D600DED877 /* ContentSlide.swift */; };
 		F916172F081C880C2A4A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553039D05CF5FE7D90673CF7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Medium.ttf"; sourceTree = "<group>"; };
 		C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Regular.ttf"; sourceTree = "<group>"; };
 		C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
+		C3AA938B2EE114D600DED877 /* ContentSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSlide.swift; sourceTree = "<group>"; };
 		D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		E6234F61395003538B888563 /* SampleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 			children = (
 				E6234F61395003538B888563 /* SampleSlide.swift */,
 				C3AA93742EDECC7900DED877 /* TitleSlide.swift */,
+				C3AA938B2EE114D600DED877 /* ContentSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2717BF2D4E9FD63A28F7EB81 /* SampleSlide.swift in Sources */,
+				C3AA938C2EE114D600DED877 /* ContentSlide.swift in Sources */,
 				C3AA937A2EDFC9DE00DED877 /* Colors.swift in Sources */,
 				765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */,
 				C3AA93752EDECC7900DED877 /* TitleSlide.swift in Sources */,

@@ -20,5 +20,6 @@ struct SlideConfiguration {
     // クロージャ内にスライドを追加していくことで、スライドの並び順
     let slideIndexController = SlideIndexController {
         TitleSlide()
+        ContentSlide()
     }
 }
