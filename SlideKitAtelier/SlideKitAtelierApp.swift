@@ -8,40 +8,51 @@ import SwiftUI
 import SlideKit
 
 @main
-// SlideKit で作るプレゼンアプリのエントリーポイント
 struct SlideKitAtelierApp: App {
-
-    // スライド全体の設定 を管理
     private static let configuration = SlideConfiguration()
 
-
-    // スライドを順番に表示するビュー
     var presentationContentView: some View {
-        // どのスライドを表示するか管理するコントローラー
         SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
     }
 
     var body: some Scene {
-        // スクリーンに映すプレゼン用ビュー
+        // メインのプレゼンテーションウィンドウ
         WindowGroup {
+            #if os(iOS)
             PresentationView(slideSize: Self.configuration.size) {
                 presentationContentView
             }
+            .gesture(
+                DragGesture(minimumDistance: 50)
+                    .onEnded { value in
+                        if value.translation.width < 0 {
+                            // 左スワイプ: 次へ
+                            Self.configuration.slideIndexController.forward()
+                        } else if value.translation.width > 0 {
+                            // 右スワイプ: 前へ
+                            Self.configuration.slideIndexController.back()
+                        }
+                    }
+            )
+            #else
+            PresentationView(slideSize: Self.configuration.size) {
+                presentationContentView
+            }
+            #endif
         }
-        // .setupAsPresentationWindow
-        // → このウィンドウを プレゼン用として設定。
-        // → ダブルクリックや特定操作でスライド編集画面を開くことも可能。
+        #if os(macOS)
         .setupAsPresentationWindow(Self.configuration.slideIndexController) {
             NSWorkspace.shared.open(URL(string: "SlideKitAtelier://editor")!)
         }
-        // メニューから PDF に書き出す機能
-        .addPDFExportCommands(for: presentationContentView, with: Self.configuration.slideIndexController, size: Self.configuration.size)
+        .addPDFExportCommands(
+            for: presentationContentView,
+            with: Self.configuration.slideIndexController,
+            size: Self.configuration.size
+        )
+        #endif
 
-        // 発表者用画面
-        // 次のスライドのプレビュー
-        // タイマーやノート
-        // 現在のスライド番号などが確認できます。
-
+        #if os(macOS)
+        // 発表者用画面（macOSのみ）
         WindowGroup {
             macOSPresenterView(
                 slideSize: Self.configuration.size,
@@ -50,7 +61,51 @@ struct SlideKitAtelierApp: App {
                 presentationContentView
             }
         }
-        // .setupAsPresenterWindow() でプレゼン用ウィンドウとリンク
         .setupAsPresenterWindow()
+        #endif
     }
 }
+
+// iOS用の簡易発表者ビュー（オプション）
+#if os(iOS)
+struct iOSPresenterView: View {
+    let slideSize: CGSize
+    @ObservedObject var slideIndexController: SlideIndexController
+    let presentationContent: AnyView
+
+    var body: some View {
+        VStack {
+            // 現在のスライド番号表示
+            Text("スライド \(slideIndexController.currentIndex + 1)")
+                .font(.headline)
+                .padding()
+
+            // プレゼンテーションコンテンツ
+            presentationContent
+
+            // ナビゲーションボタン
+            HStack {
+                Button(action: {
+                    slideIndexController.back()
+                }) {
+                    Image(systemName: "chevron.left")
+                        .font(.title)
+                        .padding()
+                }
+                .disabled(slideIndexController.currentIndex == 0)
+
+                Spacer()
+
+                Button(action: {
+                    slideIndexController.forward()
+                }) {
+                    Image(systemName: "chevron.right")
+                        .font(.title)
+                        .padding()
+                }
+            }
+            .padding()
+        }
+    }
+}
+#endif
