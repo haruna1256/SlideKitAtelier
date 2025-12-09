@@ -22,5 +22,6 @@ struct SlideConfiguration {
         TitleSlide()
         ContentSlide()
         ReserchSlide()
+        ReasonSlide()
     }
 }
