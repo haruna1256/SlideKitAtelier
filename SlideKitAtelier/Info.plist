@@ -37,5 +37,16 @@
 		<string>KiwiMaru-Regular.ttf</string>
 		<string>KiwiMaru-Medium.ttf</string>
 	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>他のデバイスとスライドを同期するために、ローカルネットワークへのアクセスが必要です。</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_slidekit-sync._tcp</string>
+		<string>_slidekit-sync._udp</string>
+	</array>
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<key>com.apple.security.network.server</key>
+	<true/>
 </dict>
 </plist>
