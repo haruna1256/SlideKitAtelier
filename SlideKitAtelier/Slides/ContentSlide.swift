@@ -44,11 +44,12 @@ struct ContentSlide: View {
                     Spacer()
                     // 目次一覧
                     VStack(alignment: .leading, spacing: 20) {
-                        ContentItem(index: 1, title: "SlideKit とは")
-                        ContentItem(index: 2, title: "なぜ SwiftUI でスライド？")
-                        ContentItem(index: 3, title: "実際の構築プロセス")
-                        ContentItem(index: 4, title: "Swift on Windows")
-                        ContentItem(index: 5, title: "まとめ")
+                        ContentItem(index: 1, title: "研究概要")
+                        ContentItem(index: 2, title: "SlideKit とは")
+                        ContentItem(index: 3, title: "なぜ SwiftUI でスライド？")
+                        ContentItem(index: 4, title: "実際の構築プロセス")
+                        ContentItem(index: 5, title: "Swift on Windows")
+                        ContentItem(index: 6, title: "まとめ")
                     }
 
                     Spacer()

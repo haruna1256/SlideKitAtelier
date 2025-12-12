@@ -9,44 +9,89 @@ import SlideKit
 
 @main
 struct SlideKitAtelierApp: App {
+
+    // RemoteオブジェクトはApp全体で一貫して使用
+    @StateObject private var remote = Remote()
     private static let configuration = SlideConfiguration()
 
+    // SlideIndexControllerをラップ
+    @StateObject private var slideWrapper: SlideControllerWrapper
+
+    init() {
+        let wrapper = SlideControllerWrapper(controller: Self.configuration.slideIndexController)
+        _slideWrapper = StateObject(wrappedValue: wrapper)
+    }
+
+    // SlideIndexControllerへの参照を容易にするためにComputed Propertyとして保持
+    private var slideIndexController: SlideIndexController {
+        slideWrapper.controller
+    }
+
     var presentationContentView: some View {
-        SlideRouterView(slideIndexController: Self.configuration.slideIndexController)
+        SlideRouterView(slideIndexController: slideIndexController)
+    }
+
+    // SlideIndexControllerが変更された際にリモート送信を行うためのView (macOS Presenter Window用)
+    private func RemoteSenderView<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            // 絶対ステップが変更されるたびにリモート送信
+            .onReceive(slideWrapper.$absoluteStep.removeDuplicates()) { step in
+                // 同期中の変更は送信しない（無限ループ防止）
+                guard !slideWrapper.isSyncing else {
+                    return
+                }
+                remote.sendSlideIndex(step)
+            }
     }
 
     var body: some Scene {
-        // メインのプレゼンテーションウィンドウ
+        // メインのプレゼンテーションウィンドウ (iOSでは操作面、macOSでは表示面)
         WindowGroup {
-            #if os(iOS)
             PresentationView(slideSize: Self.configuration.size) {
                 presentationContentView
             }
-            .gesture(
+            // リモート受信処理を有効にする
+            .onAppear {
+                remote.onReceiveSlideIndex = { step in
+                    Task { @MainActor in
+                        slideWrapper.syncTo(absoluteStep: step)
+                    }
+                }
+            }
+
+            // 絶対ステップの変更を監視してリモート送信
+            .onReceive(slideWrapper.$absoluteStep.removeDuplicates()) { step in
+                // 同期中の変更は送信しない（無限ループ防止）
+                guard !slideWrapper.isSyncing else {
+                    return
+                }
+                remote.sendSlideIndex(step)
+            }
+
+            #if os(iOS)
+            // iOSでのスワイプ操作によるローカルナビゲーション
+            .highPriorityGesture(
                 DragGesture(minimumDistance: 50)
                     .onEnded { value in
                         if value.translation.width < 0 {
                             // 左スワイプ: 次へ
-                            Self.configuration.slideIndexController.forward()
+                            slideWrapper.forward()
                         } else if value.translation.width > 0 {
                             // 右スワイプ: 前へ
-                            Self.configuration.slideIndexController.back()
+                            slideWrapper.back()
                         }
                     }
             )
-            #else
-            PresentationView(slideSize: Self.configuration.size) {
-                presentationContentView
-            }
             #endif
         }
+
         #if os(macOS)
-        .setupAsPresentationWindow(Self.configuration.slideIndexController) {
+        .setupAsPresentationWindow(slideIndexController) {
             NSWorkspace.shared.open(URL(string: "SlideKitAtelier://editor")!)
         }
         .addPDFExportCommands(
             for: presentationContentView,
-            with: Self.configuration.slideIndexController,
+            with: slideIndexController,
             size: Self.configuration.size
         )
         #endif
@@ -54,11 +99,14 @@ struct SlideKitAtelierApp: App {
         #if os(macOS)
         // 発表者用画面（macOSのみ）
         WindowGroup {
-            macOSPresenterView(
-                slideSize: Self.configuration.size,
-                slideIndexController: Self.configuration.slideIndexController
-            ) {
-                presentationContentView
+            // macOSの発表者ビューでの操作でもインデックスを送信する
+            RemoteSenderView {
+                macOSPresenterView(
+                    slideSize: Self.configuration.size,
+                    slideIndexController: slideIndexController
+                ) {
+                    presentationContentView
+                }
             }
         }
         .setupAsPresenterWindow()
@@ -66,24 +114,32 @@ struct SlideKitAtelierApp: App {
     }
 }
 
-// iOS用の簡易発表者ビュー（オプション）
+// iOS用の簡易発表者ビュー（オプション） 
 #if os(iOS)
 struct iOSPresenterView: View {
     let slideSize: CGSize
     @ObservedObject var slideIndexController: SlideIndexController
+
+    init<Content: View>(slideSize: CGSize, slideIndexController: SlideIndexController, @ViewBuilder content: () -> Content) {
+        self.slideSize = slideSize
+        self.slideIndexController = slideIndexController
+        self.presentationContent = AnyView(content())
+    }
+
     let presentationContent: AnyView
 
     var body: some View {
         VStack {
-            // 現在のスライド番号表示
             Text("スライド \(slideIndexController.currentIndex + 1)")
                 .font(.headline)
                 .padding()
 
-            // プレゼンテーションコンテンツ
-            presentationContent
+            PresentationView(slideSize: slideSize) {
+                presentationContent
+            }
+            .frame(maxWidth: 300)
+            .border(Color.gray)
 
-            // ナビゲーションボタン
             HStack {
                 Button(action: {
                     slideIndexController.back()
