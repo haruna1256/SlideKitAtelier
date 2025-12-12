@@ -38,7 +38,10 @@ SwiftUI と SlideKit を用いた **インタラクティブなプレゼン資�
 4. **成果確認**  
    - Preview でスライドの表示確認  
    - PDF 書き出しで資料として保存可能  
-   - 発表者用画面でスライド進行管理  
+   - 発表者用画面でスライド進行管理
+
+5. **他端末との同期**
+   - macとスマホの同期
 
 ---
 
@@ -47,6 +50,22 @@ SwiftUI と SlideKit を用いた **インタラクティブなプレゼン資�
 <img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/e94e312a-e6f4-41ac-afce-b5cf60bc986d" />
 
 #### 目次
-<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/61e1cacc-bc42-428c-b087-b09af29403f0" />
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/4b675d62-4236-4357-82ec-0faed603e4e6" />
+
+#### 各タイトル
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/c9e64741-5d06-4dca-8dd6-bae58df6abdc" />
+
+#### 概要
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/e04d45ac-13dd-403a-af27-4813daeaa751" />
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/7f8565cc-7c92-428c-9c93-1e6ba6cd3598" />
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/850f5e11-14d8-4858-b835-23cdca0e66b5" />
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/0f6573e5-0441-4883-ae3b-786513fe64e7" />
+
+
+
+
+
+
+
 
 
