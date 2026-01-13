@@ -36,22 +36,6 @@ struct ReserchSlide: View {
                     Text("研究目的")
                         .font(Font.custom("KiwiMaru-Medium", size: 90))
                         .foregroundColor(Color("Pure White"))
-
-                    HStack(spacing: 16) {
-                        Image("swift")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                        Image("swift")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                        Image("swift")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                    }
-                    .padding(.leading, 100)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             }
