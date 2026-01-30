@@ -11,16 +11,21 @@
 		33731079806E8EE86E56057F /* SlideKitAtelierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBC5EBB84C03AB5BBC5ED /* SlideKitAtelierApp.swift */; };
 		571D634AA5096E839ABD0C59 /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9865720E850CF3128D1F4EDA /* SlideKit */; };
 		765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */; };
-		C38F2B632EE7FE9600CE8064 /* ReasonSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2B622EE7FE9600CE8064 /* ReasonSlide.swift */; };
 		C38F2BCF2EEAAA6600CE8064 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BCE2EEAAA5E00CE8064 /* Remote.swift */; };
 		C38F2BD12EEBAC8000CE8064 /* SlideControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BD02EEBAC8000CE8064 /* SlideControllerWrapper.swift */; };
+		C38F2BD32F19DD1300CE8064 /* ResearchSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BD22F19DD0E00CE8064 /* ResearchSlide.swift */; };
+		C38F2BD62F19DE4A00CE8064 /* OverviewSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BD52F19DE4A00CE8064 /* OverviewSlide.swift */; };
+		C38F2BD82F19DF4400CE8064 /* SlideKitIntroSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BD72F19DF4400CE8064 /* SlideKitIntroSlide.swift */; };
+		C38F2BDA2F1F1DC700CE8064 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BD92F1F1DC700CE8064 /* WebView.swift */; };
+		C38F2BDC2F1F1DD000CE8064 /* SwiftOnWindowsSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BDB2F1F1DD000CE8064 /* SwiftOnWindowsSlide.swift */; };
+		C38F2BDE2F1F241300CE8064 /* BuildProcessSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BDD2F1F241300CE8064 /* BuildProcessSlide.swift */; };
+		C38F2BE02F1F250F00CE8064 /* SummarySlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F2BDF2F1F250F00CE8064 /* SummarySlide.swift */; };
 		C3AA93752EDECC7900DED877 /* TitleSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA93742EDECC7900DED877 /* TitleSlide.swift */; };
 		C3AA937A2EDFC9DE00DED877 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA93792EDFC9DE00DED877 /* Colors.swift */; };
 		C3AA93862EDFE11100DED877 /* KiwiMaru-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */; };
 		C3AA93882EDFE11900DED877 /* KiwiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */; };
 		C3AA938A2EDFE12000DED877 /* KiwiMaru-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */; };
 		C3AA938C2EE114D600DED877 /* ContentSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA938B2EE114D600DED877 /* ContentSlide.swift */; };
-		C3AA939B2EE158CF00DED877 /* ReserchSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA939A2EE158CF00DED877 /* ReserchSlide.swift */; };
 		F916172F081C880C2A4A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553039D05CF5FE7D90673CF7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -30,16 +35,21 @@
 		553039D05CF5FE7D90673CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F9B93D61143679038DFBDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6B564336D79A7221EEA77296 /* SlideKitAtelier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideKitAtelier.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C38F2B622EE7FE9600CE8064 /* ReasonSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonSlide.swift; sourceTree = "<group>"; };
 		C38F2BCE2EEAAA5E00CE8064 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 		C38F2BD02EEBAC8000CE8064 /* SlideControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideControllerWrapper.swift; sourceTree = "<group>"; };
+		C38F2BD22F19DD0E00CE8064 /* ResearchSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchSlide.swift; sourceTree = "<group>"; };
+		C38F2BD52F19DE4A00CE8064 /* OverviewSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewSlide.swift; sourceTree = "<group>"; };
+		C38F2BD72F19DF4400CE8064 /* SlideKitIntroSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideKitIntroSlide.swift; sourceTree = "<group>"; };
+		C38F2BD92F1F1DC700CE8064 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C38F2BDB2F1F1DD000CE8064 /* SwiftOnWindowsSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOnWindowsSlide.swift; sourceTree = "<group>"; };
+		C38F2BDD2F1F241300CE8064 /* BuildProcessSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildProcessSlide.swift; sourceTree = "<group>"; };
+		C38F2BDF2F1F250F00CE8064 /* SummarySlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySlide.swift; sourceTree = "<group>"; };
 		C3AA93742EDECC7900DED877 /* TitleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSlide.swift; sourceTree = "<group>"; };
 		C3AA93792EDFC9DE00DED877 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C3AA93852EDFE11100DED877 /* KiwiMaru-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Medium.ttf"; sourceTree = "<group>"; };
 		C3AA93872EDFE11900DED877 /* KiwiMaru-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Regular.ttf"; sourceTree = "<group>"; };
 		C3AA93892EDFE12000DED877 /* KiwiMaru-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KiwiMaru-Light.ttf"; sourceTree = "<group>"; };
 		C3AA938B2EE114D600DED877 /* ContentSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSlide.swift; sourceTree = "<group>"; };
-		C3AA939A2EE158CF00DED877 /* ReserchSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserchSlide.swift; sourceTree = "<group>"; };
 		D0919AE8FB9D7283DF7FE271 /* SlideConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideConfiguration.swift; sourceTree = "<group>"; };
 		E6234F61395003538B888563 /* SampleSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,11 +86,12 @@
 		81412C1F618F7AD6FDC5EF2E /* Slides */ = {
 			isa = PBXGroup;
 			children = (
+				C38F2BD92F1F1DC700CE8064 /* WebView.swift */,
+				C38F2BD22F19DD0E00CE8064 /* ResearchSlide.swift */,
+				C38F2BD42F19DD1800CE8064 /* Slides */,
 				E6234F61395003538B888563 /* SampleSlide.swift */,
 				C3AA93742EDECC7900DED877 /* TitleSlide.swift */,
 				C3AA938B2EE114D600DED877 /* ContentSlide.swift */,
-				C3AA939A2EE158CF00DED877 /* ReserchSlide.swift */,
-				C38F2B622EE7FE9600CE8064 /* ReasonSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -91,6 +102,18 @@
 				328A404EEA175B20CC9696D7 /* SlideKitAtelier */,
 				C57D832F154484C3F6F5B325 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		C38F2BD42F19DD1800CE8064 /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				C38F2BDF2F1F250F00CE8064 /* SummarySlide.swift */,
+				C38F2BDD2F1F241300CE8064 /* BuildProcessSlide.swift */,
+				C38F2BDB2F1F1DD000CE8064 /* SwiftOnWindowsSlide.swift */,
+				C38F2BD72F19DF4400CE8064 /* SlideKitIntroSlide.swift */,
+				C38F2BD52F19DE4A00CE8064 /* OverviewSlide.swift */,
+			);
+			path = Slides;
 			sourceTree = "<group>";
 		};
 		C3AA93782EDFC9BE00DED877 /* Component */ = {
@@ -191,15 +214,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3AA939B2EE158CF00DED877 /* ReserchSlide.swift in Sources */,
 				C38F2BD12EEBAC8000CE8064 /* SlideControllerWrapper.swift in Sources */,
+				C38F2BDA2F1F1DC700CE8064 /* WebView.swift in Sources */,
 				2717BF2D4E9FD63A28F7EB81 /* SampleSlide.swift in Sources */,
 				C38F2BCF2EEAAA6600CE8064 /* Remote.swift in Sources */,
 				C3AA938C2EE114D600DED877 /* ContentSlide.swift in Sources */,
+				C38F2BDE2F1F241300CE8064 /* BuildProcessSlide.swift in Sources */,
 				C3AA937A2EDFC9DE00DED877 /* Colors.swift in Sources */,
 				765A350891805E890DD91CC3 /* SlideConfiguration.swift in Sources */,
-				C38F2B632EE7FE9600CE8064 /* ReasonSlide.swift in Sources */,
+				C38F2BD82F19DF4400CE8064 /* SlideKitIntroSlide.swift in Sources */,
 				C3AA93752EDECC7900DED877 /* TitleSlide.swift in Sources */,
+				C38F2BD32F19DD1300CE8064 /* ResearchSlide.swift in Sources */,
+				C38F2BE02F1F250F00CE8064 /* SummarySlide.swift in Sources */,
+				C38F2BD62F19DE4A00CE8064 /* OverviewSlide.swift in Sources */,
+				C38F2BDC2F1F1DD000CE8064 /* SwiftOnWindowsSlide.swift in Sources */,
 				33731079806E8EE86E56057F /* SlideKitAtelierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

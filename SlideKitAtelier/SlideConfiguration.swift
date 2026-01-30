@@ -21,7 +21,11 @@ struct SlideConfiguration {
     let slideIndexController = SlideIndexController {
         TitleSlide()
         ContentSlide()
-        ReserchSlide()
-        ReasonSlide()
+        OverviewSlide()
+        SlideKitIntroSlide()
+        SwiftOnWindowsSlide()
+        BuildProcessSlide()
+        SummarySlide()
+
     }
 }
