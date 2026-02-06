@@ -61,7 +61,29 @@ SwiftUI と SlideKit を用いた **インタラクティブなプレゼン資�
 <img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/850f5e11-14d8-4858-b835-23cdca0e66b5" />
 <img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/0f6573e5-0441-4883-ae3b-786513fe64e7" />
 
+### 結果
+* Swift on Windows では、可能性検証を目的として環境構築からビルドまでを実施した。
+  * 公式ドキュメントやツールチェーンを調査し、macOS 以外での Swift の位置づけを理解した。
+    * 結果として、実用には制約がある一方で、Swift の移植性を確認する経験となった。
+* 実際のスライド開発は macOS + Xcode を中心に行った。
+  * SwiftUI と SlideKit を用い、UI設計・状態管理・アニメーションを含めた構築を行った。
+  * 実務に近い環境で試行錯誤することで、設計と実装を往復する経験を積んだ。
+* SlideKit の Phase 機構を活用し、情報を段階的に提示する構成を設計した。
+  * 単なる表示制御ではなく、「どの順番で伝えるか」を意識してスライドを構築した。
+  * プレゼンそのものを UI として捉える視点を得ることができた。
+* iOS と連携し、iPhone からスライドの表示切替や進行操作を行える仕組みを実装した。
+  * 操作する側の UX を考慮し、直感的に扱える UI を意識して設計した。
+  * デバイス間連携を通して、状態共有や入力設計への理解が深まった。
+* 本制作を通して、スライド作成を単なる資料作りではなく開発体験として捉えられた。
+  * UI設計・状態管理・拡張性を意識した構成を考える力が身についた。
+  * 好きな技術を使いながら、設計力を伸ばせることを実感した。
 
+### 今後の課題
+
+
+### 参考文献
+https://www.swift.org/
+https://mtj0928.github.io/SlideKit/documentation/slidekit/
 
 
 
